@@ -1,3 +1,7 @@
+package y2023
+
+import println
+import readInput
 import kotlin.streams.toList
 
 fun main() {
