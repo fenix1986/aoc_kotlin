@@ -9,9 +9,11 @@ fun main() {
 
     // test if implementation meets criteria from the description, like:
     val testInput = readInput("y2023/dayXX_test")
-    check(part1(testInput) == 1)
-
     val input = readInput("y2023/dayXX")
+
+    check(part1(testInput) == 1)
     part1(input).println()
+
+    check(part2(testInput) == 1)
     part2(input).println()
 }
