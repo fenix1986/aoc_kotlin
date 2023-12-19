@@ -5,17 +5,17 @@ import readInput
 import kotlin.streams.toList
 
 fun main() {
-    fun numberOfWins(input : String) : Int {
+    fun numberOfWins(input: String): Int {
         val split = input.split(" +\\| +".toRegex())
         val wins = split[0].split(": +| +".toRegex())
         val winning = wins.stream()
-                .skip(2)
-                .map(String::toInt)
-                .toList()
+            .skip(2)
+            .map(String::toInt)
+            .toList()
 
         val mine = split[1].split(" +".toRegex()).stream()
-                .map(String::toInt)
-                .toList()
+            .map(String::toInt)
+            .toList()
 
         return mine.filter { winning.contains(it) }.size
     }
@@ -39,7 +39,7 @@ fun main() {
 
             val size = numberOfWins(it)
             if (size > 0) {
-                for (i in 0..< size) {
+                for (i in 0..<size) {
                     cards[index + i + 1] += cards[index]
                 }
             }
@@ -47,7 +47,6 @@ fun main() {
 
         return cards.sum()
     }
-
 
 
     // test if implementation meets criteria from the description, like:

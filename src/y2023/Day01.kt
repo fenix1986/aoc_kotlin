@@ -16,15 +16,15 @@ fun main() {
     fun part2(input: List<String>): Int {
         return part1(input.map { s ->
             s
-                    .replace("one", "one1one")
-                    .replace("two", "two2two")
-                    .replace("three", "three3three")
-                    .replace("four", "four4four")
-                    .replace("five", "five5five")
-                    .replace("six", "six6six")
-                    .replace("seven", "seven7seven")
-                    .replace("eight", "eight8eight")
-                    .replace("nine", "nine9nine")
+                .replace("one", "one1one")
+                .replace("two", "two2two")
+                .replace("three", "three3three")
+                .replace("four", "four4four")
+                .replace("five", "five5five")
+                .replace("six", "six6six")
+                .replace("seven", "seven7seven")
+                .replace("eight", "eight8eight")
+                .replace("nine", "nine9nine")
         })
     }
 

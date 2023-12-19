@@ -8,7 +8,7 @@ fun main() {
         return input.sumOf {
             val split = it.split("[:;]".toRegex())
             val game = split[0].split(" ")[1].toInt()
-            var result : Int = game
+            var result: Int = game
 
             for ((index, s) in split.withIndex()) {
                 if (index == 0) continue
@@ -20,17 +20,18 @@ fun main() {
 
                 for (cub in cubs) {
                     val (value, color) = inputLineRegex
-                            .matchEntire(cub)
-                            ?.destructured
-                            ?: throw IllegalArgumentException("Incorrect input line $cub")
+                        .matchEntire(cub)
+                        ?.destructured
+                        ?: throw IllegalArgumentException("Incorrect input line $cub")
 
                     map[color] = value.toInt()
                 }
 
                 if (
-                        map.getOrDefault("red", 0) > 12
-                        || map.getOrDefault("green", 0) > 13
-                        || map.getOrDefault("blue", 0) > 14) {
+                    map.getOrDefault("red", 0) > 12
+                    || map.getOrDefault("green", 0) > 13
+                    || map.getOrDefault("blue", 0) > 14
+                ) {
                     result = 0
                 }
             }
@@ -55,15 +56,15 @@ fun main() {
 
                 for (cub in cubs) {
                     val (value, color) = inputLineRegex
-                            .matchEntire(cub)
-                            ?.destructured
-                            ?: throw IllegalArgumentException("Incorrect input line $cub")
+                        .matchEntire(cub)
+                        ?.destructured
+                        ?: throw IllegalArgumentException("Incorrect input line $cub")
 
                     map[color]?.add(value.toInt())
                 }
             }
 
-            map.get("red")?.maxOrNull()!! * map.get("green")?.maxOrNull()!! * map.get("blue")?.maxOrNull()!!
+            map["red"]?.maxOrNull()!! * map["green"]?.maxOrNull()!! * map["blue"]?.maxOrNull()!!
         }
     }
 
